@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AuthMiniapp</string>
+    <string name="welcome_message">Welcome to AuthMiniapp Runner App</string>
+    <string name="welcome_suggestion">Force close to reload ern mini-app bundle</string>
+</resources>
