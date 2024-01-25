@@ -1,5 +1,7 @@
 package com.walmartlabs.ern.authminiapp;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 
 import com.ern.api.impl.navigation.ElectrodeBaseActivity;
@@ -23,5 +25,10 @@ public class MainActivity extends ElectrodeBaseActivity {
     @Override
     public int getFragmentContainerId() {
         return R.id.fragment_container;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(null);
     }
 }
