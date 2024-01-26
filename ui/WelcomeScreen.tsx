@@ -1,6 +1,8 @@
-import { Image, StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { Image, PixelRatio, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from "../App";
+import { Button } from "../common/ui/Button";
+import { GlobalStyles } from "../common/styles/GlobalStyle";
 
 type ProfileScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -9,29 +11,25 @@ type ProfileScreenNavigationProp = NativeStackNavigationProp<
 
 type Props = {
     navigation: ProfileScreenNavigationProp;
-  };
+};
   
 const WelcomeScreen = ({navigation}: Props) => {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, GlobalStyles.container]}>
             <Image style={styles.intro} source={require('../assets/intro.png')} />
             <Text style={styles.title}>Let's Start Your Journey to Smarter Ewallet</Text>
             <Text style={styles.subtitle}>Consumer Loan Payment, pay bills and many other services</Text>
-            <TouchableHighlight style={styles.submit} onPress={() =>  navigation.navigate("Login")}>
-                <Text style={[styles.submitText]}>Get Started</Text>
-            </TouchableHighlight>
+            <Button title="Get Started" onPressed={() => navigation.navigate("Login")}  />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#F8F8F8',
-        alignContent: 'center',
         alignItems: 'center',
-        flex: 1,
         justifyContent: 'center',
     },
+
     intro: {
         width: 300,
         height: 300
@@ -59,25 +57,6 @@ const styles = StyleSheet.create({
         paddingLeft: 48,
         paddingRight: 48
     },
-
-    submit: {
-        marginRight: 32,
-        marginLeft: 32,
-        marginTop: 10,
-        paddingTop: 20,
-        paddingBottom: 20,
-        backgroundColor: '#3971b9',
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#fff',
-        alignSelf: 'stretch'
-      },
-
-      submitText: {
-        color: '#fff',
-        textAlign: 'center',
-        fontSize: 17
-      }
 });
 
 export default WelcomeScreen
