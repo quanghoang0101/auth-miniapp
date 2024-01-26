@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Keyboard, StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { electrodeBridge } from 'react-native-electrode-bridge';
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";

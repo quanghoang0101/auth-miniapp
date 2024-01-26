@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { GestureResponderEvent, StyleProp, StyleSheet, Text, TouchableHighlight, ViewStyle } from "react-native";
 
 interface BProps {

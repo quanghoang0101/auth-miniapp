@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleProp, StyleSheet, Text, TextInput, View, ViewStyle } from "react-native";
 import { GlobalStyles } from "../styles/GlobalStyle";
 
