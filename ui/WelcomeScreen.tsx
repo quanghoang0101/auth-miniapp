@@ -1,4 +1,5 @@
-import { Image, PixelRatio, StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import React from 'react';
+import { Image, StyleSheet, Text, View } from "react-native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from "../App";
 import { Button } from "../common/ui/Button";

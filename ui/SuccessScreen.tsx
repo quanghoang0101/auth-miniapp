@@ -1,3 +1,4 @@
+import React from 'react';
 import { Image, StyleSheet, Text, View } from "react-native";
 import { electrodeBridge } from 'react-native-electrode-bridge';
 import { GlobalStyles } from "../common/styles/GlobalStyle";

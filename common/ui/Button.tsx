@@ -1,14 +1,15 @@
+import React from 'react';
 import { GestureResponderEvent, StyleProp, StyleSheet, Text, TouchableHighlight, ViewStyle } from "react-native";
 
 interface BProps {
     title: string,
     style?: StyleProp<ViewStyle>,
-    onPressed?: ((event: GestureResponderEvent) => void) | undefined;
+    onPressed: ((event: GestureResponderEvent) => void) | undefined;
 }
   
 export const Button = ({title, style, onPressed}: BProps) => {
     return (
-        <TouchableHighlight style={[styles.submit, style != null ? style : []]} onPress={onPressed}>
+        <TouchableHighlight style={[styles.submit, style ?? []]} onPress={onPressed}>
             <Text style={[styles.submitText]}>{title}</Text>
         </TouchableHighlight>
     );

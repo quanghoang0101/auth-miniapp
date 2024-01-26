@@ -21,7 +21,7 @@ import Foundation
 
 struct RunnerConfig {
     static let mainMiniAppName = "AuthMiniapp"
-    static let rnDevSupportEnabled = true
+    static let rnDevSupportEnabled = false
     static let packagerHost = "192.168.1.9"
     static let packagerPort = "8081"
 }

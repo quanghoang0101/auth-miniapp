@@ -27,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.packagerHost = RunnerConfig.packagerHost
         config.packagerPort = RunnerConfig.packagerPort
         ElectrodeReactNative.start(withConfigurations: config, ernDelegate: nil)
+        let miniapp = ElectrodeReactNative.sharedInstance().miniApp(withName: "AuthMiniapp", properties: nil, overlay: false, sizeFlexibility: 0, delegate: nil)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainNavigationController()
+        window?.rootViewController = miniapp
         window?.makeKeyAndVisible()
         return true
     }

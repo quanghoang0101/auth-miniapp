@@ -1,3 +1,4 @@
+import React from 'react';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { GlobalStyles } from "../common/styles/GlobalStyle";
 import { ViewInput } from "../common/ui/ViewInput";
