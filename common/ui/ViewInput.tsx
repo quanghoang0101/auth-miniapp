@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleProp, StyleSheet, Text, TextInput, View, ViewStyle } from "react-native";
 import { GlobalStyles } from "../styles/GlobalStyle";
+import { useState } from 'react';
 
 interface InputProps {
     title: string,
@@ -9,10 +10,13 @@ interface InputProps {
 }
 
 export const ViewInput = ({title, placeholder, viewstyle}: InputProps) => {
+
+    const [isFocused, setIsFocused] = useState(false);
+    
     return (
         <View style={[GlobalStyles.fullWidth, viewstyle]}>
             <Text style={styles.title}>{title}</Text>
-            <TextInput  placeholder={placeholder} style={styles.input}></TextInput>
+            <TextInput  placeholder={placeholder} style={[styles.input, isFocused ? styles.inputActive : styles.inputInactive]} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
         </View>
     );
 }
@@ -26,8 +30,7 @@ const styles = StyleSheet.create({
     },
     input: {
         color: "#000",
-        height: 60, 
-        borderColor: '#E5E5E5', 
+        height: 60,     
         borderWidth: 1, 
         borderRadius: 10,  
         marginBottom: 20, 
@@ -36,4 +39,12 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10
     },
+
+    inputInactive: {
+        borderColor: '#E5E5E5',
+    },
+
+    inputActive: {
+        borderColor: '#3971b9',
+    }
 });

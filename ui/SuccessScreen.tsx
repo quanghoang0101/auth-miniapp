@@ -8,7 +8,7 @@ export const SuccessScreen = () => {
     return (
         <View style={[GlobalStyles.container, styles.container]}>
             <Image style={styles.art} source={require('../assets/success.png')} />
-            <Text style={styles.title}>Sign up Successfully</Text>
+            <Text style={styles.title}>Congratulations!</Text>
             <Text style={styles.subtitle}>Everything will be fine!</Text>
             <Button title="Done" style={styles.button} onPressed={() => onDonePressed()}/>
         </View>
