@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Image, StyleSheet, Text, View } from "react-native";
-import { electrodeBridge } from 'react-native-electrode-bridge';
 import { GlobalStyles } from "../common/styles/GlobalStyle";
 import { Button } from "../common/ui/Button";
+import { AuthUserApi } from 'react-native-auth-api';
+import userData from '../assets/data.json';
 
 export const SuccessScreen = () => {
     return (
@@ -16,7 +17,7 @@ export const SuccessScreen = () => {
 }
 
 const onDonePressed = () => {
-    electrodeBridge.emitEvent('auth.event.done');
+    AuthUserApi.events().emitAuthUserEvent(userData)
 }
 
 const styles = StyleSheet.create({

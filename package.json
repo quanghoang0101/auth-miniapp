@@ -17,7 +17,8 @@
     "react-native": "0.68.7",
     "react-native-electrode-bridge": "^1.6.0",
     "react-native-safe-area-context": "3.4.0",
-    "react-native-screens": "3.5.0"
+    "react-native-screens": "3.5.0",
+    "react-native-auth-api": "https://github.com/quanghoang0101/react-native-auth-api"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

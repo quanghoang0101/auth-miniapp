@@ -6,6 +6,9 @@ import { RootStackParamList } from "../App";
 import { GlobalStyles } from "../common/styles/GlobalStyle";
 import { ViewInput } from "../common/ui/ViewInput";
 import { Button } from "../common/ui/Button";
+import { AuthUserApi } from 'react-native-auth-api';
+
+import userData from '../assets/data.json';
 
 type ProfileScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -30,7 +33,7 @@ const LoginScreen = ({navigation}: Props) => {
 }
 
 const onDonePressed = () => {
-    electrodeBridge.emitEvent('auth.event.done');
+    AuthUserApi.events().emitAuthUserEvent(userData)
 }
 
 const styles = StyleSheet.create({
